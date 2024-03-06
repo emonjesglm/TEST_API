@@ -11,10 +11,10 @@ app = Flask(__name__)
 limiter = Limiter(app=app, key_func=get_remote_address, default_limits=["5 per minute"])
 
 # Configuración de la conexión a SQL Server
-server = os.environ.get('DB_SERVER', '35.188.180.39')
-database = os.environ.get('DB_DATABASE', 'glm_test')
-username = os.environ.get('DB_USERNAME', 'sqlserver')
-password = os.environ.get('DB_PASSWORD', '8unwsOsaBhIq6cm1')
+server = '35.188.180.39'
+database = 'glm_test'
+username = 'sqlserver'
+password = '8unwsOsaBhIq6cm1'
 driver = '{ODBC Driver 17 for SQL Server}'
 
 # Establecer la conexión
